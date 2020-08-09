@@ -88,10 +88,10 @@ class index extends React.Component<IApplicantProps> {
     //fetch data for the first time from the mock API
     fetchPage = (searchValue:string) => {
         //fetch call for the API
-        fetch("http://localhost:3004/customers")
+        fetch("./db.json")
             .then(res => res.json())
             .then((data) => {
-                this.sortData(data, searchValue)
+                this.sortData(data.customers, searchValue)
 
             }).catch(err => {
                 this.setState({
@@ -99,7 +99,7 @@ class index extends React.Component<IApplicantProps> {
                     showDialog: true,
                     searchText: searchValue
                 })
-            });
+            })
     }
     // function to sort the data for the UI
     sortData = (data: Array<Customer>, searchText: string) => {
@@ -162,8 +162,17 @@ class index extends React.Component<IApplicantProps> {
             <Translation>
                 {
                     (t, { i18n }) => <div >
+                        
                         <Layout>
                             <ErrorDialog showDialog={showDialog} />
+                            {loading ?
+                                <ContentWrapper >
+                                    <ApplicantHeader sortedCount={countArray} />
+                                    <LoadingComponent loading={loading} /></ContentWrapper>
+                                :
+                                   
+
+
                             <ContentWrapper >
                                 <ApplicantHeader sortedCount={countArray} />
                                 <FilterWrapper>
@@ -188,18 +197,15 @@ class index extends React.Component<IApplicantProps> {
                                     </DropDownWrapper>
 
                                 </FilterWrapper>
-
-                                {loading ? <LoadingComponent loading={loading} />
-                                    :
-                                    data.map((item: SortedData) => {
+                                    {data.map((item: SortedData) => {
                                         return <ContentSection name={item.name} data={item.data} />
                                     })
-
-
-                                }
+                               }
 
 
                             </ContentWrapper>
+
+                            }
 
                         </Layout>
                     </div>
