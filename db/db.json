@@ -1,0 +1,80 @@
+{
+    "customers": [
+        {
+            "firstname": "Friedrich",
+            "lastname": " Heinrich",
+            "mobile": "+49 146 344 23811",
+            "email": "Friedrich.heinrich@gmail.com",
+            "status": "Appointment_Set",
+            "date": "22 JULY 14:00",
+            "bid": null
+            
+
+        },
+        {
+            "firstname": "Hans",
+            "lastname": " Ulrich",
+            "mobile": "+49 146 344 23811",
+            "email": "Hans-Ulrichh@gmail.com",
+            "status": "Appointment_Set",
+            "date": "22 JULY 14:00",
+            "bid": null
+        },
+        {
+            "firstname": "Karlheinz",
+            "lastname": " Brandenburg",
+            "mobile": "+4914634423811",
+            "email": "karlheinzbrandenburg@gmail.com",
+            "status": "Appointment_Set",
+            "date": "22 JULY 14:00",
+            "bid": null
+        },
+        {
+            "firstname": "Maxmillian",
+            "lastname": " Von Mustermann",
+            "mobile": "+4914634423811",
+            "email": "max.mustermann@gmail.com",
+            "status": "Property_Viewed",
+            "date": "22 JULY 14:00",
+            "bid": 250.000
+        },
+        {
+            "firstname": "Bernhard",
+            "lastname": " Weiß",
+            "mobile": "+4914634423811",
+            "email": "bernhard.weiß@gmail.com",
+            "status": "Property_Viewed",
+            "date": "22 JULY 14:00",
+            "bid": 250.000
+        },
+        {
+            "firstname": "Hansjörg",
+            "lastname": " Felmy",
+            "mobile": "+4914634423811",
+            "email": "Hansjörg.felmy@gmail.com",
+            "status": "Property_Viewed",
+            "date": "22 JULY 14:00",
+            "bid": 250.000
+        },
+        {
+            "firstname": "Gottschalk",
+            "lastname": " Godeslack",
+            "mobile": "+4914634423811",
+            "email": "gottschalk.godeslack@gmail.com",
+            "status": "Property_Viewed",
+            "date": "22 JULY 14:00",
+            "bid": 250.000
+        },
+        {
+            "firstname": "Ekkehard",
+            "lastname": " Hardy",
+            "mobile": "+4914634423811",
+            "email": "ekkehard.hardy@gmail.com",
+            "status": "Property_Viewed",
+            "date": "22 JULY 14:00",
+            "bid": 250.000
+        }
+
+
+    ]
+}
