@@ -12,9 +12,11 @@ interface Props {
     showDialog?: Boolean,
 }
 
-export default function AlertDialog(props: Props) {
+const AlertDialog: React.FC<Props> = (props) => {
+    
     const [open, setOpen] = React.useState(false);
     React.useEffect(() => {
+        //function waiting for props to open dialog
         if (props.showDialog) setOpen(true)
     }, [props.showDialog])
 
@@ -43,5 +45,7 @@ export default function AlertDialog(props: Props) {
                 </DialogActions>
             </Dialog>
         </div>
-    );
+    )
 }
+
+export default AlertDialog;

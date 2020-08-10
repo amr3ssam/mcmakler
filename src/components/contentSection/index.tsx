@@ -11,6 +11,7 @@ interface Props {
 
 }
 function index(props: Props) {
+    // function to map the sorted data from APi to each applicant card
     function renderCard() {
         if (props.data && props.data.length > 0) {
             return props.data.map((item) => {

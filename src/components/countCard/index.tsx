@@ -2,7 +2,6 @@ import React from "react";
 import { Wrapper,CountText, Text } from './styles'
 
 interface Props {
-
     /**
      *  props
      */

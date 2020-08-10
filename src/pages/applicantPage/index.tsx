@@ -17,7 +17,7 @@ interface IApplicantProps {
     history?: any,
     location?: any,
 }
-// special case the style for the seach Material UI component
+// special case the style for the search Material UI component
 const styles = {
     input: {
         height: '40px',

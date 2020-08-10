@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import React from "react";
 import { useTranslation } from 'react-i18next';
 import { Wrapper, LeftWrapper, RightWrapper, Text} from './styles'
@@ -15,12 +14,14 @@ interface Props{
     isMobile: boolean;
 }
 
-function index(props: Props) {
+const Index: React.FC<Props> = (props) => {
+    //get the translation from Json files
     const { t } = useTranslation();
+    // function to render count components with the right count
     function renderCount() {
         if (props.sortedCount && props.sortedCount.length > 0) {
             return props.sortedCount.map((item) => {
-                return <CountCard count={item.count} name={item.name} showBorder />
+                return <CountCard count={item.count} name={item.name} showBorder={item.name !== "Others"?? true} />
             })
         } else {
             return null;
@@ -37,6 +38,7 @@ function index(props: Props) {
                 {!props.isMobile ? renderCount() : null}
             </RightWrapper>
         </Wrapper>
-    );
+    )
 }
-export default withMobileFlag(index);
+
+export default withMobileFlag(Index);
